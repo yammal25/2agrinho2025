@@ -1,0 +1,41 @@
+body {
+    background-color: #a8d5ba;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#game-container {
+    width: 600px;
+    height: 400px;
+    background-color: #8c734e; /* Cor do campo */
+    border: 5px solid #4a3e2e;
+    position: relative;
+    overflow: hidden;
+}
+
+#character {
+    width: 30px;
+    height: 30px;
+    background-color: #e6e6e6; /* Cor do personagem */
+    position: absolute;
+    bottom: 20px;
+    left: 285px;
+    border-radius: 50%; /* Faz o personagem ser uma bolinha */
+}
+
+.obstacle {
+    width: 40px;
+    height: 40px;
+    background-color: #6d4c41; /* Cor dos obstáculos */
+    position: absolute;
+    top: -40px;
+    animation: moveObstacle 3s linear infinite;
+}
+
+@keyframes moveObstacle {
+    from { top: -40px; }
+    to { top: 400px; }
+}
